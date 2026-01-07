@@ -127,7 +127,8 @@ start.bat
 This project is licensed under the [MIT License](LICENSE).
 
 ---
+<div align="center">
 
-<p align="center">
-  <em>Forged by Secret Coders for Autonomous Hacks 26.</em>
-</p>
+**Built with ❤️ for the Future of Students by Ahad Dangarvawala**
+
+</div>
