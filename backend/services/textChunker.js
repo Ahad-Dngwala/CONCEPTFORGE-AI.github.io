@@ -23,7 +23,7 @@ function chunkText(
   const cleanedText = text.replace(/\s+/g, " ").trim();
 
   // Split into sentences
-  const sentences = cleanedText.match(/[^.!?]+[.!?]/g) || [];
+  const sentences = cleanedText.match(/[^.!?]+[.!?]?/g) || [];
 
   const chunks = [];
   let currentChunk = [];
@@ -33,7 +33,7 @@ function chunkText(
     const sentence = sentences[i];
 
     // If adding this sentence exceeds chunk size → finalize chunk
-    if (currentLength + sentence.length > options.maxChunkSize) {
+    if (currentChunk.length > 0 && currentLength + sentence.length > options.maxChunkSize) {
       chunks.push(currentChunk.join(" ").trim());
 
       // Overlap last N sentences
